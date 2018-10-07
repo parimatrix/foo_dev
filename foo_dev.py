@@ -43,10 +43,13 @@ def top_scorers(opt):
 
 def points_table(opt):
     width=20
+    page = requests.get("http://www.espn.in/football/table/_/league/eng.1") if (int(opt)==1) else requests.get("http://www.espn.in/football/table/_/league/esp.1")
+    '''
     if(int(opt)==1):
         page = requests.get("http://www.espn.in/football/table/_/league/eng.1")
     else:
         page = requests.get("http://www.espn.in/football/table/_/league/esp.1")
+    '''
     soup = BeautifulSoup(page.content, 'html.parser')
     rows = soup.find_all("tr",{"class":"standings-row"})
     h1 = "   Team - Name"
@@ -56,10 +59,8 @@ def points_table(opt):
         team_names = rows[i].find('span',{'class':'team-names'}).get_text()
         points = rows[i].find_all('td')[8].get_text()
         print(f'{team_names:<{width}}','    ',points)
-
         
 # Start of the program
-
 print("Enter mode, foo or dev ?")
 mode = input()
 
@@ -95,4 +96,5 @@ while(int(inp)!=3):
             top_scorers(inp)
         else:
             points_table(inp)
-    print()        
+    print()
+    
