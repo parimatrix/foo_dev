@@ -8,6 +8,6 @@ git clone https://github.com/parimatrix/foo_dev.git
 cd foo_dev
 python foo_dev.py
 ```  
-## to_do
+## To-Do
 1. Exception Handling
 2. Improve codeQuality
