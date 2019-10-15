@@ -1,6 +1,6 @@
 # foo_dev
 ### A python3 script for web scraping data related to Football and Codechef Ratings. 
-(Yeah. The common species of people you will find easily in NSIT)
+(Yeah. The common species of people you will find easily in NSUT)
 ### Required: Python3
 ### Get started
 ```
@@ -10,4 +10,4 @@ python foo_dev.py
 ```  
 ## To-Do
 1. Exception Handling
-2. Improve codeQuality
+2. Improve Code Quality
