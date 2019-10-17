@@ -67,7 +67,7 @@ if(mode=="dev"):
     os.system('python cc_rating.py')
     exit()
     
-inp = 0;
+inp = 0
 while(int(inp)!=3):
     print("Enter League option:")
     print("1. EPL")
@@ -77,22 +77,8 @@ while(int(inp)!=3):
     if(int(inp)==3):
         print("             Thanks ! Bye")
         exit()
-    if(int(inp)==1):
-        print("Enter choice:")
-        print("1. Top Scorers")
-        print("2. Points Table")
-        ch = input()
-        if(int(ch)==1):
-            top_scorers(inp)
-        else:
-            points_table(inp)
     else:
-        print("Enter choice:")
-        print("1. Top Scorers")
-        print("2. Points Table")
+        print("Enter choice:\n1. Top Scorers\n2. Points Table\n")
         ch = input()
-        if(int(ch)==1):
-            top_scorers(inp)
-        else:
-            points_table(inp)
+        top_scorers(inp) if int(ch) == 1 else points_table(inp)
     print()        
