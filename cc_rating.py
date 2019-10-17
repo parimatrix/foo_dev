@@ -14,8 +14,7 @@ usernames = []
 
 if os.path.exists('users.txt'):
 	infile = open('users.txt')
-	for word in infile.read().split():
-		usernames.append(word)
+	usernames.extend([word for word in infile.read().split()])
 else:
 	myname = input("Enter Codechef UserId : ")
 	usernames.append(myname)
